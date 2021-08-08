@@ -1,0 +1,269 @@
+@keyframes show{
+    from {
+        max-width: 0;
+    }
+    to {
+        max-width: 80%;
+    }
+}
+
+@font-face {
+    font-family: Gothic;
+    src: url(../font/Roboto-Bold.ttf);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    overflow-y: hidden;
+    font-family: Gothic;
+}
+#toggleBtn{
+    position: absolute;
+    top: -100%;
+}
+label{
+    color:red;
+    font-size: 70px;
+}
+label h5{
+    text-align: center;
+    font-size: 30px;
+}
+#toggleBtn:checked ~ div.ani{
+    transform: rotateY(-180deg);
+    background: #666;
+}
+div.ani{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f9c51d;
+    width: 100%;
+    height: 100%;
+    transform-origin: left center;
+    transition: 2s;
+    z-index:2;
+}
+
+
+div#wrap{
+    width: 100%;
+    height: 960px;
+    background:#f9c51d;
+    position: relative;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+}
+top{
+    font-size: 80px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    color:red;
+}
+
+/* 캘린더 API */
+div#calendar{
+  display: flex;
+    width: 60%;
+    height: 60%;
+}
+
+
+table{
+    border: 3px solid red;
+}
+tbody{
+    border: 3px solid red;
+}
+tr{
+    border: 3px solid red;
+}
+th{
+    border: 3px solid red;
+}
+td{
+    border: 3px solid red;
+}
+.fc-daygrid-day:hover{
+    background-color: #f0d375;
+}
+
+/* 팝업창 */
+
+div.op_wrap{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(163, 162, 162, 0.548);
+    z-index: 2;
+}
+
+div#popup{
+    width: 800px;
+    height: 500px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 40%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    overflow: hidden;
+    border-radius: 30px;
+    z-index: 10;
+    transition: 1s;
+}
+div#no-popup{
+    position: absolute;
+    top: 0;
+    left: 50;
+    transform: translateX(-50%);
+    visibility: hidden;
+    transition: 1s;
+}
+
+div.head{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background: red;
+}
+div.data{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    font-size: 18px;
+}
+div#no-popup div.head{
+    visibility: hidden;
+
+}
+div#body{
+    background: #f9c51d;  
+    width: 100%;
+    height: 100%;
+    font-size: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+div#div_append_save{
+   width: 100%;
+   height: 50px;
+   display: flex;
+   justify-content: space-around;
+}
+
+div.div_appendd{
+    width: 5%;
+    height: 50px;
+    background: url(../img/plus.png)no-repeat center center;
+    cursor: pointer;
+}
+div#div_append:hover{
+    background-color: rgba(201, 200, 200, 0.26);
+}
+img.save{
+    height: 64px;
+}
+img.append{
+    margin-left: 5%;
+    margin-top: 5%;
+}
+img.del{
+    cursor: pointer;
+}
+img.del:hover{
+    opacity: 0.5;
+}
+div.append:hover{
+    background-color: rgba(201, 200, 200, 0.26);
+}
+ul{
+    width: 100%;
+    height: 70%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+
+}
+li.read_li{
+}
+li{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    align-items: center;
+    margin-bottom: 10px;
+    
+}
+
+li > img{
+    position: absolute;
+    right: 80px;
+}
+div.modify{
+    width: 40%;
+    height: 50px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+div.modify:hover{
+    background-color: rgba(201, 200, 200, 0.26);
+}
+input[type=text]{
+    width: 80%;
+    height: 50px;
+    border: none;
+    border-bottom: 1px solid black;
+    background: #f9c51d;
+    animation-name: show;
+    animation-duration: 1s; 
+    animation-fill-mode: both;
+}
+input[type=button]{
+    width: 50px;
+    height: 40px;
+    
+}
+input[type=button]:hover{
+    opacity: 0.5;
+}
+.modify_button{
+    width: 100px;
+    height: 40px;
+    border: none;
+    background: url(../img/plus2.png)no-repeat center center;
+}
+.complete_button{
+    width: 100px;
+    height: 40px;
+    border: none;
+    background: url(../img/checked.png)no-repeat center center;
+}
+div.div_button{
+    width: 90%;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 3%;
+}
