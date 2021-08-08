@@ -97,7 +97,7 @@ document.addEventListener('DOMContentLoaded', function() {
     read(date)
     init();
   }
-
+//ddd
   function real_save(date){
     localStorage.setItem("date",JSON.stringify(obj_list))
     save_after(date)
