@@ -41,13 +41,18 @@ document.addEventListener('DOMContentLoaded', function() {
     ul_body.appendChild(li_body);
     
     del.addEventListener("click",function(event){//할 일 삭제 
+      if(ul_body.children.length < 2){
+        alert("1개 이상 내용을 입력해주세요")
+      }else{
       event.target.parentNode.remove();
-      })
+      }
+    })
     }
   }
   
   function modify_text(ob,date){//캘린더 내용 수정, 추가하기 
     if(ob == null){
+      append_text();
     }else{//이미 data에 값이 들어 있으면 값을 수정 할 수 있게 input text로 바뀜
     li_body = document.querySelectorAll("li")
     for(var i = 0; i < li_body.length ; i++){
@@ -67,27 +72,31 @@ document.addEventListener('DOMContentLoaded', function() {
     li_body.appendChild(del);
     ul_body.appendChild(li_body);
     del.addEventListener("click",function(event){
+      if(ul_body.children.length < 2){
+        alert("1개 이상 내용을 입력해주세요")
+      }else{
       event.target.parentNode.remove();
+      }
     })
     }
     ob = null
   }
   
  //수정완료 버튼생성
-  var div = document.createElement("div")
+    var div = document.createElement("div")
     div.id = "div_append_save"
     div_append_save.className = "div_appendd"
     div_body.appendChild(div)
     div.appendChild(div_append_save)
     document.querySelector(".div_appendd").addEventListener("click",append_text)
-  var input = document.createElement("input")
+    var input = document.createElement("input")
     input.type = "button"
     input.className = "complete_button"
     div.appendChild(input)
     input.addEventListener("click",function(){
       save(date)
-    })
-  }
+      })
+    }
 
   function save_after(date){
     li_body = document.querySelectorAll("li")
@@ -97,7 +106,6 @@ document.addEventListener('DOMContentLoaded', function() {
     read(date)
     init();
   }
-//ddd
   function real_save(date){
     localStorage.setItem("date",JSON.stringify(obj_list))
     save_after(date)
