@@ -30,18 +30,6 @@ body{
     overflow-y: hidden;
     font-family: Gothic;
 }
-#toggleBtn{
-    position: absolute;
-    top: -100%;
-}
-label{
-    color:red;
-    font-size: 70px;
-}
-label h5{
-    text-align: center;
-    font-size: 30px;
-}
 div.ani{
     position: absolute;
     display: flex;
@@ -56,7 +44,7 @@ div.ani{
     z-index:2;
 }
 .loading{
-    font-size: 60px;
+    font-size: 40px;
 }
 .progress-area{ 
     width:500px; 
@@ -94,8 +82,8 @@ top{
 /* 캘린더 API */
 div#calendar{
   display: flex;
-    width: 60%;
-    height: 60%;
+    width: 50%;
+    height: 70%;
 }
 
 
