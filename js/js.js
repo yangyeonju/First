@@ -13,7 +13,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
   const popup       = document.querySelector("#no-popup"),
         wrap        = document.querySelector("#wrap");
-       
   var selectday,
       obj_list = [],
       obj ,
