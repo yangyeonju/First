@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
   var selectday,
       obj_list = [],
       obj ,
+      
       li_body         = document.createElement("li"),
       div_body        = document.createElement("div"),
       div_data        = document.createElement("div"),
